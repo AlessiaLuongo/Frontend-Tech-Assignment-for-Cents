@@ -2,6 +2,18 @@ const firstInput = document.getElementById("first-number-input");
 const secondInput = document.getElementById("second-number-input");
 const calculateButton = document.getElementById("button");
 
+firstInput.onkeydown = function (event) {
+  if (isNaN(event.key) && event.key !== "Backspace") {
+    event.preventDefault();
+  }
+};
+
+secondInput.onkeydown = function (event) {
+  if (isNaN(event.key) && event.key !== "Backspace") {
+    event.preventDefault();
+  }
+};
+
 calculateButton.addEventListener("click", () => {
   const firstNumber = firstInput.value;
   const secondNumber = secondInput.value;
