@@ -1,30 +1,126 @@
-html,
 body {
   height: 100%;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #00bfa5, #ff5722);
+  padding: 0em;
+
+  background-image: url("/assets/foglio-a-quadretti.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-weight: 400;
 }
-main {
-  padding: 5vh;
+
+h1 {
+  margin: 1.5em;
+  padding: 1em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.7em;
 }
 
 #main-div {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  width: 50wh;
-  height: auto;
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
+  margin-top: 5em;
 }
-@media (max-width: 586px) {
+
+#first-number-div,
+#second-number-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 45%;
+}
+
+#first-number-input,
+#second-number-input {
+  width: 3em;
+  height: 3em;
+
+  background: transparent;
+
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Pacifico", cursive;
+  font-weight: 600;
+
+  border: none;
+  border-bottom: 5px dotted black;
+  outline: none;
+}
+
+#first-number-input:hover,
+#second-number-input:hover {
+  cursor: pointer;
+}
+
+#button-div {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 8em;
+  height: 3em;
+  margin: 2em;
+
+  background-color: #edd2e9;
+
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-weight: 700;
+  font-size: 1.5em;
+
+  margin-top: 1em;
+  transition: transform 0.3s, background-color 0.5s ease;
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: #b434a3;
+  box-shadow: 10px 5px 5px #edd2e9;
+}
+
+@media screen and (max-width: 590px) {
   #main-div {
-    justify-content: space-around;
     flex-direction: column;
-    padding: 1rem;
-    width: 80%;
+    align-items: center;
+  }
+
+  #first-number-div,
+  #second-number-div {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  h1 {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+
+  button {
+    width: 10em;
+    height: 3em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  button {
+    width: 100%;
+    border-radius: 0;
+    border: 1.8px solid black;
+    margin: 0;
+  }
+  h1 {
+    font-size: 1.4em;
+  }
+  h3 {
+    font-size: 1.2em;
   }
 }
