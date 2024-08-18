@@ -46,13 +46,21 @@ const calculateSum = function (firstNumber, secondNumber) {
     })
     .then((data) => {
       const mainDiv = document.getElementById("main-div");
-      const sum = document.createElement("div");
-      sum.classList.add("col-6", "col-md-4", "col-lg-3");
+      const sumDiv = document.getElementById("sum-div");
 
-      sum.innerText = `${data}`;
-      mainDiv.appendChild(sum);
+      sumDiv.innerText = `${data}`;
+      mainDiv.appendChild(sumDiv);
+
+      clearContext();
     })
     .catch((error) => {
       console.error("Fetch error:", error.message);
     });
 };
+
+function clearContext() {
+  const sumDiv = document.getElementById("sum-div");
+  firstInput.value = "";
+  secondInput.value = "";
+  sumDiv.value = "";
+}
