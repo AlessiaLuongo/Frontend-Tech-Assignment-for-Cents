@@ -49,7 +49,6 @@ const calculateSum = function (firstNumber, secondNumber) {
       const sumDiv = document.getElementById("sum-div");
 
       sumDiv.innerText = `${data}`;
-      mainDiv.appendChild(sumDiv);
 
       clearContext();
     })
